@@ -21,6 +21,7 @@
   --box-shadow-light: rgba(0, 0, 0, 0.1);
   --box-shadow-medium: rgba(0, 0, 0, 0.2);
   --border-color: #bdc3c7;      /* Light border color for subtle separation */
+  --highlight-gradient: linear-gradient(135deg, #f39c12, #e67e22); /* Warm gradient for highlights */
 }
 
 /* Body styles */
@@ -114,7 +115,8 @@ section {
   border-radius: 8px;
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 8px var(--box-shadow-light);
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
 }
 
 .card:hover {
@@ -123,9 +125,9 @@ section {
   border-color: var(--accent-color);
 }
 
-/* Buttons with construction theme colors */
+/* Buttons with construction theme colors and gradient */
 button {
-  background-color: var(--button-color);
+  background: var(--highlight-gradient);
   color: #fff;
   padding: 12px 25px;
   border: none;
@@ -133,11 +135,12 @@ button {
   cursor: pointer;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
-  transition: background 0.3s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-  background-color: var(--button-hover);
+  background: linear-gradient(135deg, #d35400, #e67e22);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transform: scale(1.05);
 }
 
